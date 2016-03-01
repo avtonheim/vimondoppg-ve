@@ -1,4 +1,3 @@
-
 import Test from './module-test';
 
 var msgContainer = document.querySelector('.message-container');
@@ -16,14 +15,14 @@ btn.addEventListener('click', e => {
   });
 });
 
-socket.on('connect', function () {
-    socket.on('msg', function (data) {
-      console.log('got msg: ' + data);
-      var msgEl = document.createElement('p');
-      msgEl.innerHTML = data.msg;
-      msgContainer.appendChild(msgEl);
-    });
+socket.on('connect', function() {
+  socket.on('msg', function(data) {
+    console.log('got msg: ' + data);
+    var msgEl = document.createElement('p');
+    msgEl.innerHTML = data.msg;
+    msgContainer.appendChild(msgEl);
   });
+});
 
 // function update(delta) {
 //
