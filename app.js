@@ -30,7 +30,7 @@ io.on('connection', function(socket) {
 
 app.set('port', process.env.PORT || 8000);
 
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
+//app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
